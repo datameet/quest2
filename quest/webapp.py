@@ -1,13 +1,15 @@
 import web
+from .db import Dataset
+from .template import render_template
 
 urls = (
     "/", "index"
 )
 app = web.application(urls, globals())
-application = app.wsgifunc()
 
 class index:
     def GET(self):
-        return "Hello, world!\n"
+        datasets = Dataset.find_all()
+        return render_template("index.html", datasets=datasets)
 
 
