@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h1>Datasets</h1>
+	<ul>
+	{% for d in datasets %}
+		<li><a href="#">{{d.title}}</a></li>
+	{% endfor %}
+	</ul>
+{% endblock %}

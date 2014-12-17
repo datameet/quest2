@@ -1,4 +1,6 @@
+Jinja2==2.7.3
+MarkupSafe==0.23
 gunicorn==19.1.1
 psycopg2==2.5.4
-web.py==0.37
+git+git://github.com/webpy/webpy.git
 wsgiref==0.1.2
